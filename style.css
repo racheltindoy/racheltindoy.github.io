@@ -12,9 +12,8 @@ body {
 }
 
 .portfolio-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+   display: flex;
+   justify-content: space-between;
     padding: 2rem;
     max-width: 1200px;
 }
@@ -22,13 +21,15 @@ body {
 .card {
     background-color: #fff;
     border-radius: 12px;
-    padding: 1.5rem;
+    padding: 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 20%;
 }
 
-.card_img_con {min-height: 110px; display: flex; align-items: center;}
+.card_img_con {min-height: 125px; display: flex; align-items: center;}
 
 .card img {
     width: 100%;
@@ -83,34 +84,28 @@ body {
     color: #2f3e73;
 }
 
+@media (max-width: 1200px) {
+    .portfolio-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {max-width: 25%; margin: 15px;}
+}
+
 @media (max-width: 1024px) {
-	.main_con {padding: 0;}
+	/* .main_con {padding: 0;} */
+    .card {max-width: 33%; margin: 15px;}
 }
 
 @media (max-width: 768px) {
 
-	
     .main_con h2 {
         font-size: 1.4rem;
         margin-bottom: 1.5rem;
     }
 
-    .portfolio-container {
-        padding: 1.5rem 1rem;
-        gap: 1.5rem;
-    }
-
-    .card {
-        padding: 1.2rem;
-    }
-
-    .card h3 {
-        font-size: 1rem;
-    }
-
-    .card a {
-        font-size: 0.95rem;
-    }
+    .card {max-width: 100%; margin: 15px 0;}
 }
 
 @media (max-width: 480px) {

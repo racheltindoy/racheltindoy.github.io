@@ -13,9 +13,10 @@ body {
 
 .portfolio-container {
    display: flex;
-   justify-content: space-between;
+   justify-content: center;
     padding: 2rem;
     max-width: 1200px;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -27,9 +28,10 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
     max-width: 20%;
+    margin: 10px;
 }
 
-.card_img_con {min-height: 125px; display: flex; align-items: center;}
+.card_img_con {min-height: 125px; display: flex; align-items: center; flex-wrap: wrap;}
 
 .card img {
     width: 100%;

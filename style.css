@@ -11,6 +11,14 @@ body {
 	flex-direction: column;
 }
 
+section.intro {
+    max-width: 490px;
+    font-size: 12px;
+    margin: 0 auto;
+}
+
+section ul {max-width: 290px; text-align: left; margin: 0 auto}
+
 .portfolio-container {
    display: flex;
    justify-content: center;
